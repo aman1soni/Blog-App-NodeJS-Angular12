@@ -1,0 +1,17 @@
+<body style="background-color: darkcyan;">
+  <div class="container-fluid pb-5">
+    <div class="container">
+      <h1 class="mb-4 ml-2 pt-3">Blog Articles</h1>
+          <div *ngFor="let blog of allBlogs" class="card mt-4" style="border: 1px solid black; border-radius: 10px;box-shadow: 2px 5px 20px black;">
+            <div class="card-body">
+              <h4 class="card-title">{{blog.title}}</h4>
+              <div class="card-subtitle text-muted mb-2">
+                Category: <b>{{blog.category}}</b>,
+                Time: <b>{{blog.createdAt | date:'short'}}</b>
+              </div>
+              <a routerLink="articles/{{blog.slug}}" class="btn btn-dark  mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>

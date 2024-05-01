@@ -1,0 +1,29 @@
+<body>
+    <div class="container my-5">
+        <h1 class="mb-3">Edit Post</h1>
+            <form [formGroup]="editBlog" (ngSubmit)="onUpdate()">
+            <div class="form-group mb-4">
+            <label for="title">Title</label>
+            <input required type="text" name="title" id="title" class="form-control" ngModel formControlName="title">
+            </div>
+            <div class="form-group mb-4">
+                <label for="exampleFormControlSelect2">Select category</label>
+            <select class="form-control selectpicker" ngModel data-style="btn-info" name="category" formControlName="category">
+                        <optgroup label="Select Table">
+                        <option name="" value="Technology">Technology</option>
+                        <option name="table1" value="Funny">Funny</option>
+                        <option name="table2" value="Devotional">Devotional</option>
+                        <option name="table3" value="Filmy">Filmy</option>
+                        </optgroup>
+                    </select>
+                    </div>     
+            <div class="form-group mb-4">
+            <label for="description">Description</label>
+            <textarea required name="description" id="description" class="form-control" ngModel formControlName="description"></textarea>
+            </div>
+
+            <a href="/" id="cancel" class="btn btn-danger">Cancel</a>
+            <button type="submit" class="btn btn-dark px-5">Save</button>
+        </form>
+    </div>
+</body>

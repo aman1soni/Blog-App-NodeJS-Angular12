@@ -1,0 +1,15 @@
+<body>
+  <div class="container">
+    <p class="mt-3" style="font-weight: 500;font-size: 50px;">{{blogData.title}}</p>
+    <div class="container text-dark mb-2 ml-5"> <strong>Posted on:</strong> 
+      {{  blogData.createdAt | date:'medium'}}
+    </div>
+    <div class="container">
+      <a routerLink="/articles/edit/{{blogData.slug}}" class="btn px-5 btn-dark">Edit</a>
+        <a class="btn btn-danger px-4" id="del" (click)="onDelete(blogData._id)">Delete</a>
+    </div>
+    <div class="container mt-3 py-2 px-3" id="desc">
+      {{blogData.description}}
+    </div>
+  </div>
+</body>
